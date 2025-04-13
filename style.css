@@ -1,0 +1,287 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-height: 100vh; /* Kontener zajmuje co najmniej 100% wysokości widoku */
+  position: relative;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column; /* Ustawienie układu kolumnowego */
+}
+
+header {
+  text-align: center;
+  padding: 40px 0;
+  color: white;
+  margin-bottom: 20px;
+}
+
+header img {
+  height: 300px;
+  width: auto; /* Zachowaj proporcje obrazu */
+  display: block;
+  margin: 0 auto; /* Wyśrodkuj obraz */
+}
+header h1 {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+header h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+header p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+header a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+header a:hover {
+  text-decoration: underline;
+}
+header a:visited {
+  color: #2980b9;
+}
+header a:active {
+  color: #1abc9c;
+}
+header a:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+header a:focus-visible {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+header a:focus:not(:focus-visible) {
+  outline: none;
+}
+header a:focus-visible {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+header a:focus:not(:focus-visible) {
+  outline: none;
+}
+header a:focus-visible {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 400% 400%; /* Powiększenie gradientu dla efektu animacji */
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  animation: rainbow 5s infinite; /* Animacja gradientu */
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie elementów menu */
+  gap: 20px; /* Odstępy między elementami */
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white; /* Kolor tekstu */
+  text-decoration: none; /* Usuń podkreślenie */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease; /* Animacja przy najechaniu */
+}
+
+nav ul li a:hover {
+  background-color: #1abc9c; /* Kolor tła po najechaniu */
+  border-radius: 5px; /* Zaokrąglenie krawędzi */
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  opacity: 0; /* Ukryj sekcje przed animacją */
+  animation: slideIn 1s ease-out;
+  animation-fill-mode: forwards; /* Utrzymaj końcowy stan animacji */
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+ul li:before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  position: absolute;
+  left: -20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#o-mnie {
+  animation-delay: 0.5s;
+}
+
+#umiejetnosci {
+  animation-delay: 1s;
+}
+
+#projekty {
+  animation-delay: 1.5s;
+}
+
+#kontakt {
+  animation-delay: 2s;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%; /* Kontener zajmuje całą szerokość strony */
+  margin: 0; /* Usuń marginesy */
+}
+
+.image-container img {
+  width: 100%; /* Obraz zajmuje całą szerokość strony */
+  height: 400px; /* Ustaw wysokość obrazu */
+  object-fit: cover; /* Przycięcie obrazu, aby pasował */
+  display: block;
+  margin: 0; /* Usuń marginesy */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Kolor tekstu */
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności */
+}
+
+.header .image-container {
+  position: relative;
+  width: 100%; /* Kontener zajmuje całą szerokość strony */
+  margin: 0; /* Usuń marginesy */
+}
+
+.header .image-container img {
+  width: 100%; /* Obraz zajmuje całą szerokość strony */
+  height: 400px; /* Ustaw wysokość obrazu */
+  object-fit: cover; /* Przycięcie obrazu, aby pasował */
+  display: block;
+  margin: 0; /* Usuń marginesy */
+}
+
+.header .text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności */
+}
+
+p {
+  color: black; /* Ustawienie koloru tekstu na czarny dla sekcji */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+.social-icons a {
+  font-size: 24px; /* Powiększenie ikon */
+  margin: 0 10px; /* Odstępy między ikonami */
+  color: white; /* Kolor ikon */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animacja przy najechaniu */
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* Powiększenie ikon przy najechaniu */
+  color: #1abc9c; /* Zmiana koloru przy najechaniu */
+}
